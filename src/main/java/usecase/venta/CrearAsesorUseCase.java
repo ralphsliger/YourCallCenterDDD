@@ -10,8 +10,8 @@ public class CrearAsesorUseCase extends UseCase<RequestCommand<CrearAsesor>, Res
     @Override
     public void executeUseCase(RequestCommand<CrearAsesor> crearAsesorRequestCommand) {
         var command = crearAsesorRequestCommand.getCommand();
-        var asesor = Venta.from(command.getVentaID(), retrieveEvents(command.getVentaID().value()));
-        asesor.generarAsesor(command.getId(),command.getNombre());
+        var asesor = Venta.from(command.VentaID(), retrieveEvents(command.Id().value()));
+        asesor.generarAsesor(command.Id(),command.Nombre());
         emit().onResponse(new ResponseEvents(asesor.getUncommittedChanges()));
     }
 }

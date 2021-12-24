@@ -16,15 +16,15 @@ public class CrearAsesor extends Command {
             this.nombre=nombre;
     }
 
-    public AsesorID getId() {
+    public AsesorID Id() {
         return id;
     }
 
-    public Nombre getNombre() {
+    public Nombre Nombre() {
         return nombre;
     }
 
-    public VentaID getVentaID() {
+    public VentaID VentaID() {
         return ventaID;
     }
 }

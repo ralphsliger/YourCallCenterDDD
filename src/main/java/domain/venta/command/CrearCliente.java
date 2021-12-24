@@ -20,27 +20,27 @@ public class CrearCliente extends Command {
         this.downpayment = downpayment;
     }
 
-    public ClienteID getId() {
+    public ClienteID Id() {
         return id;
     }
 
-    public Identificacion getIdentificacion() {
+    public Identificacion Identificacion() {
         return identificacion;
     }
 
-    public Comprobante getComprobante() {
+    public Comprobante Comprobante() {
         return comprobante;
     }
 
-    public NumeroContacto getNumero() {
+    public NumeroContacto Numero() {
         return numero;
     }
 
-    public Downpayment getDownpayment() {
+    public Downpayment Downpayment() {
         return downpayment;
     }
 
-    public VentaID getIdVenta() {
+    public VentaID IdVenta() {
         return idVenta;
     }
 }

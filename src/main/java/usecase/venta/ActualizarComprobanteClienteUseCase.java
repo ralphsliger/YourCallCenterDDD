@@ -12,7 +12,8 @@ public class ActualizarComprobanteClienteUseCase extends UseCase<RequestCommand 
     public void executeUseCase(RequestCommand<ActualizarComprobanteCliente> actualizarComprobanteClienteRequestCommand) {
         var command = actualizarComprobanteClienteRequestCommand.getCommand();
         var comprobantecliente = Venta.from(command.getIdVenta(), retrieveEvents(command.getIdVenta().value()));
-        comprobantecliente.actualizarComprobanteCliente(command.getClienteID(), command.getIdVenta(), command.getComprobante());
+        comprobantecliente.actualizarComprobanteCliente(command.getClienteID(), command.getComprobante());
         emit().onResponse(new ResponseEvents(comprobantecliente.getUncommittedChanges()));
+
     }
 }

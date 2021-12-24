@@ -6,6 +6,7 @@ import domain.venta.values.*;
 import java.util.Objects;
 
 public class Cliente extends Entity<ClienteID> {
+
     Identificacion identificacion;
     Comprobante comprobante;
     NumeroContacto numero;

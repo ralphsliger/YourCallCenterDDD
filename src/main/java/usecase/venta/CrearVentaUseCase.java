@@ -10,7 +10,7 @@ public class CrearVentaUseCase extends UseCase<RequestCommand<CrearVenta>, Respo
     @Override
     public void executeUseCase(RequestCommand<CrearVenta> crearVentaRequestCommand) {
         var command = crearVentaRequestCommand.getCommand();
-        var venta = new Venta(command.getVentaID(),command.getAsesor(), command.getCliente());
+        var venta = new Venta(command.VentaID(),command.Asesor(), command.Cliente());
         emit().onResponse(new ResponseEvents(venta.getUncommittedChanges()));
     }
 }

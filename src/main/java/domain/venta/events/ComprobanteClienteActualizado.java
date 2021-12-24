@@ -7,25 +7,20 @@ import domain.venta.values.VentaID;
 
 public class ComprobanteClienteActualizado extends DomainEvent {
     private final ClienteID clienteID;
-    private final VentaID idVenta;
     private final Comprobante comprobante;
 
-    public ComprobanteClienteActualizado(ClienteID clienteID, VentaID idVenta, Comprobante comprobante) {
+    public ComprobanteClienteActualizado(ClienteID clienteID,  Comprobante comprobante) {
         super("YourCallCenterDDD.domain.venta.events.ComprobanteClienteActualizado");
         this.clienteID=clienteID;
-        this.idVenta=idVenta;
         this.comprobante=comprobante;
     }
 
-    public ClienteID getClienteID() {
+    public ClienteID ClienteID() {
         return clienteID;
     }
 
-    public VentaID getIdVenta() {
-        return idVenta;
-    }
 
-    public Comprobante getComprobante() {
+    public Comprobante Comprobante() {
         return comprobante;
     }
 }

@@ -48,7 +48,7 @@ class CrearVentaUseCaseTest {
         VentaCreada ventaCreada = (VentaCreada) events.get(0);
 
 
-        Assertions.assertEquals("Maria", ventaCreada.getAsesor().Nombre().value());
+        Assertions.assertEquals("Maria", ventaCreada.Asesor().Nombre().value());
 
     }
 

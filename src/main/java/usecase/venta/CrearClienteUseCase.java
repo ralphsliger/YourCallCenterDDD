@@ -12,8 +12,8 @@ public class CrearClienteUseCase extends UseCase<RequestCommand<CrearCliente>, R
     @Override
     public void executeUseCase(RequestCommand<CrearCliente> crearClienteRequestCommand) {
         var command = crearClienteRequestCommand.getCommand();
-        var cliente = Venta.from(command.getIdVenta(), retrieveEvents(command.getIdVenta().value()));
-        cliente.generarCliente(command.getId(), command.getIdentificacion(), command.getComprobante(), command.getNumero(), command.getDownpayment());
+        var cliente = Venta.from(command.IdVenta(), retrieveEvents(command.Id().value()));
+        cliente.generarCliente(command.Id(), command.Identificacion(), command.Comprobante(), command.Numero(), command.Downpayment());
         emit().onResponse(new ResponseEvents(cliente.getUncommittedChanges()));
     }
 }

@@ -40,31 +40,28 @@ public class Venta extends AggregateEvent<VentaID> {
         return cliente;
     }
 
-    public void actualizarNombreCliente(ClienteID id, Nombre nombre, VentaID idVenta){
+    public void actualizarNombreCliente(ClienteID id, Nombre nombre){
         Objects.requireNonNull(id);
         Objects.requireNonNull(nombre);
-        Objects.requireNonNull(idVenta);
+        appendChange(new NombreClienteActualizado(id, nombre));
     }
 
-    public void actualizarComprobanteCliente(ClienteID clienteID, VentaID idVenta, Comprobante comprobante){
+    public void actualizarComprobanteCliente(ClienteID clienteID, Comprobante comprobante){
         Objects.requireNonNull(clienteID);
-        Objects.requireNonNull(idVenta);
         Objects.requireNonNull(comprobante);
-        appendChange(new ComprobanteClienteActualizado(clienteID, idVenta, comprobante));
+        appendChange(new ComprobanteClienteActualizado(clienteID, comprobante));
     }
 
-    public void actualizarNumeroContactoCliente(ClienteID clienteID, VentaID idVenta, NumeroContacto numero){
+    public void actualizarNumeroContactoCliente(ClienteID clienteID, NumeroContacto numero){
         Objects.requireNonNull(clienteID);
-        Objects.requireNonNull(idVenta);
         Objects.requireNonNull(numero);
-        appendChange(new NumeroContactoClienteActualizado(clienteID, idVenta, numero));
+        appendChange(new NumeroContactoClienteActualizado(clienteID, numero));
     }
 
-    public void actualizarNombreAsesor(AsesorID asesorID, VentaID ventaID, Nombre nombre){
+    public void actualizarNombreAsesor(AsesorID asesorID,  Nombre nombre){
         Objects.requireNonNull(asesorID);
-        Objects.requireNonNull(ventaID);
         Objects.requireNonNull(nombre);
-        appendChange(new NombreAsesorActualizado(asesorID, ventaID, nombre));
+        appendChange(new NombreAsesorActualizado(asesorID, nombre));
     }
 
     public void generarAsesor(AsesorID id, Nombre nombre){

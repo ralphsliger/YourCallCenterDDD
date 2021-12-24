@@ -8,25 +8,20 @@ import domain.venta.values.VentaID;
 public class NumeroContactoClienteActualizado extends DomainEvent {
 
     private final ClienteID clienteID;
-    private final VentaID idVenta;
+
     private final NumeroContacto numero;
 
-    public NumeroContactoClienteActualizado(ClienteID clienteID, VentaID idVenta, NumeroContacto numero) {
+    public NumeroContactoClienteActualizado(ClienteID clienteID, NumeroContacto numero) {
         super("YourCallCenterDDD.domain.venta.events.NumeroContactoClienteActualizado");
         this.clienteID=clienteID;
-        this.idVenta=idVenta;
         this.numero=numero;
     }
 
-    public ClienteID getClienteID() {
+    public ClienteID ClienteID() {
         return clienteID;
     }
 
-    public VentaID getIdVenta() {
-        return idVenta;
-    }
-
-    public NumeroContacto getNumero() {
+    public NumeroContacto Numero() {
         return numero;
     }
 }

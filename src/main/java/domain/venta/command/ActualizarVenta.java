@@ -5,13 +5,13 @@ import domain.venta.Asesor;
 import domain.venta.Cliente;
 import domain.venta.values.VentaID;
 
-public class CrearVenta extends Command {
+public class ActualizarVenta extends Command {
     private final VentaID ventaID;
     private final Asesor asesor;
     private final Cliente cliente;
 
-    public CrearVenta(VentaID ventaID, Asesor asesor, Cliente cliente) {
-        this.ventaID= ventaID;
+    public ActualizarVenta(VentaID ventaID, Asesor asesor, Cliente cliente) {
+        this.ventaID=ventaID;
         this.asesor = asesor;
         this.cliente = cliente;
     }
@@ -27,4 +27,6 @@ public class CrearVenta extends Command {
     public VentaID VentaID() {
         return ventaID;
     }
+
+
 }

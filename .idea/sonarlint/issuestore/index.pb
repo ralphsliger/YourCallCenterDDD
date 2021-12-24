@@ -9,9 +9,3 @@ _
 0src/main/java/domain/venta/values/ClienteID.java,1/6/1600402f78055dab1b8cf24c138d9dbd1ee13e1c
 ]
 -src/main/java/domain/venta/values/Nombre.java,4/a/4a3205c10cefe69c325ea89a5383ff55a577a526
-e
-5src/main/java/domain/venta/values/Identificacion.java,b/8/b8ff80ecc7e6c77365164543694aa7a6245601dc
-b
-2src/main/java/domain/venta/values/Downpayment.java,b/6/b64d086fdd707795ab87ca8471b2e0710b63714e
-b
-2src/main/java/domain/venta/values/Comprobante.java,2/0/203b5316d365a5f52ceddbb26bf4aa0af783fe6f

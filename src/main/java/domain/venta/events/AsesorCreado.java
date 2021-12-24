@@ -13,11 +13,11 @@ public class AsesorCreado extends DomainEvent {
         this.nombre=nombre;
     }
 
-    public AsesorID getId() {
+    public AsesorID Id() {
         return id;
     }
 
-    public Nombre getNombre() {
+    public Nombre Nombre() {
         return nombre;
     }
 }

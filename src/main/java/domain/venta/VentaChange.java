@@ -8,28 +8,28 @@ public class VentaChange extends EventChange {
 
     public VentaChange(Venta venta) {
         apply((VentaCreada event)->{
-            venta.asesor= event.getAsesor();
-            venta.cliente= event.getCliente();
+            venta.asesor= event.Asesor();
+            venta.cliente= event.Cliente();
         });
 
         apply((ClienteCreado event)->{
-            venta.generarCliente(event.getId(), event.getIdentificacion(), event.getComprobante(), event.getNumero(), event.getDownpayment());
+            venta.generarCliente(event.Id(), event.Identificacion(), event.Comprobante(), event.Numero(), event.Downpayment());
         });
 
         apply((AsesorCreado event)->{
-            venta.generarAsesor(event.getId(), event.getNombre());
+            venta.generarAsesor(event.Id(), event.Nombre());
         });
 
         apply((NumeroContactoClienteActualizado event)->{
-            venta.actualizarNumeroContactoCliente(event.getClienteID(),event.getIdVenta(), event.getNumero());
+            venta.actualizarNumeroContactoCliente(event.ClienteID(), event.Numero());
         });
 
         apply((NombreAsesorActualizado event)->{
-            venta.actualizarNombreAsesor(event.getAsesorID(), event.getVentaID(), event.getNombre());
+            venta.actualizarNombreAsesor(event.AsesorID(),  event.Nombre());
         });
 
         apply((ComprobanteClienteActualizado event)->{
-           venta.actualizarComprobanteCliente(event.getClienteID(), event.getIdVenta(), event.getComprobante());
+           venta.actualizarComprobanteCliente(event.ClienteID(), event.Comprobante());
         });
     }
 

@@ -11,7 +11,7 @@ public class ActualizarNumeroContactoClienteUseCase extends UseCase<RequestComma
     public void executeUseCase(RequestCommand<ActualizarNumeroContactoCliente> actualizarNumeroContactoClienteRequestCommand) {
         var command = actualizarNumeroContactoClienteRequestCommand.getCommand();
         var numeroContacto = Venta.from(command.getIdVenta(), retrieveEvents(command.getIdVenta().value()));
-        numeroContacto.actualizarNumeroContactoCliente(command.getClienteID(), command.getIdVenta(), command.getNumero());
+        numeroContacto.actualizarNumeroContactoCliente(command.getClienteID(), command.getNumero());
         emit().onResponse(new ResponseEvents(numeroContacto.getUncommittedChanges()));
     }
 }
