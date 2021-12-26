@@ -41,14 +41,14 @@ private DomainEventRepository repository;
     public void actualizarNumeroContacto(){
     var command = new ActualizarNumeroContactoCliente(
             ClienteID.of("RS"),
-            VentaID.of("MB2"),
+            new VentaID("DMLEAD"),
             new NumeroContacto("300111333")
     );
 
     when(repository.getEventsBy(any())).thenReturn(events());
 
     var response = UseCaseHandler.getInstance()
-            .setIdentifyExecutor("MB2").syncExecutor(useCase, new RequestCommand<>(command)).orElseThrow();
+            .setIdentifyExecutor("DMLEAD").syncExecutor(useCase, new RequestCommand<>(command)).orElseThrow();
 
     var events = response.getDomainEvents();
     NumeroContactoClienteActualizado numeroActualizado = (NumeroContactoClienteActualizado) events.get(0);

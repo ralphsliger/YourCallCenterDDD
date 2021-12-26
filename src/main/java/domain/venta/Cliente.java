@@ -7,10 +7,10 @@ import java.util.Objects;
 
 public class Cliente extends Entity<ClienteID> {
 
-    Identificacion identificacion;
-    Comprobante comprobante;
-    NumeroContacto numero;
-    Downpayment downpayment;
+   private  Identificacion identificacion;
+    private  Comprobante comprobante;
+    private  NumeroContacto numero;
+    private  Downpayment downpayment;
 
     public Cliente(ClienteID entityId, Identificacion identificacion, Comprobante comprobante, NumeroContacto numero, Downpayment downpayment) {
         super(entityId);
@@ -37,18 +37,16 @@ public class Cliente extends Entity<ClienteID> {
     }
 
     public void actualizarIdentificacion(Identificacion identificacion){
-        Objects.requireNonNull(identificacion);
-        this.identificacion=identificacion;
+
+        this.identificacion=Objects.requireNonNull(identificacion);
     }
 
     public void actualizarComprobante(Comprobante comprobante){
-        Objects.requireNonNull(comprobante);
-        this.comprobante=comprobante;
+        this.comprobante= Objects.requireNonNull(comprobante);
     }
 
     public void actualizarNumeroContacto(NumeroContacto numero){
-        Objects.requireNonNull(numero);
-        this.numero=numero;
+        this.numero=Objects.requireNonNull(numero);;
     }
 
 

@@ -45,7 +45,7 @@ class ActualizarNombreAsesorUseCaseTest {
         );
         when(repository.getEventsBy(any())).thenReturn(events());
 
-        var response = UseCaseHandler.getInstance().setIdentifyExecutor("MB2").syncExecutor(useCase, new RequestCommand<>(command)).orElseThrow();
+        var response = UseCaseHandler.getInstance().setIdentifyExecutor("DMLEAD").syncExecutor(useCase, new RequestCommand<>(command)).orElseThrow();
         var events = response.getDomainEvents();
         NombreAsesorActualizado nombreAsesorActualizado = (NombreAsesorActualizado) events.get(0);
         Assertions.assertEquals("RALPH", nombreAsesorActualizado.Nombre().value());

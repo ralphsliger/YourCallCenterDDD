@@ -12,20 +12,21 @@ public class VentaChange extends EventChange {
             venta.cliente= event.Cliente();
         });
 
+
         apply((ClienteCreado event)->{
-            venta.generarCliente(event.Id(), event.Identificacion(), event.Comprobante(), event.Numero(), event.Downpayment());
+            venta.cliente = new Cliente(event.Id(), event.Identificacion(), event.Comprobante(), event.Numero(), event.Downpayment());
         });
 
         apply((AsesorCreado event)->{
-            venta.generarAsesor(event.Id(), event.Nombre());
+            venta.asesor = new Asesor(event.Id(), event.Nombre());
         });
 
         apply((NumeroContactoClienteActualizado event)->{
-            venta.actualizarNumeroContactoCliente(event.ClienteID(), event.Numero());
+            venta.cliente.actualizarNumeroContacto(event.Numero());
         });
 
         apply((NombreAsesorActualizado event)->{
-            venta.actualizarNombreAsesor(event.AsesorID(),  event.Nombre());
+            venta.asesor.actualizarNombre(event.Nombre());
         });
 
         apply((ComprobanteClienteActualizado event)->{

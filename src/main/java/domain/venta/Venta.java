@@ -67,7 +67,7 @@ public class Venta extends AggregateEvent<VentaID> {
     public void generarAsesor(AsesorID id, Nombre nombre){
         Objects.requireNonNull(id);
         Objects.requireNonNull(nombre);
-        appendChange(new AsesorCreado(id, nombre));
+        appendChange(new AsesorCreado(id, nombre)).apply();
     }
 
     public void generarCliente(ClienteID id, Identificacion identificacion, Comprobante comprobante, NumeroContacto numero, Downpayment downpayment){
@@ -76,7 +76,7 @@ public class Venta extends AggregateEvent<VentaID> {
         Objects.requireNonNull(comprobante);
         Objects.requireNonNull(numero);
         Objects.requireNonNull(downpayment);
-        appendChange(new ClienteCreado(id, identificacion, comprobante, numero, downpayment));
+        appendChange(new ClienteCreado(id, identificacion, comprobante, numero, downpayment)).apply();
     }
 
 

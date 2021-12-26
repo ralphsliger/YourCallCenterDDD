@@ -11,8 +11,8 @@ public class ActualizarNombreAsesorUseCase extends UseCase<RequestCommand<Actual
     @Override
     public void executeUseCase(RequestCommand<ActualizarNombreAsesor> actualizarNombreAsesorRequestCommand) {
         var command = actualizarNombreAsesorRequestCommand.getCommand();
-        var nombreAsesor = Venta.from(command.getVentaID(), retrieveEvents(command.getVentaID().value()));
-        nombreAsesor.actualizarNombreAsesor(command.getAsesorID(), command.getNombre());
-        emit().onResponse(new ResponseEvents(nombreAsesor.getUncommittedChanges()));
+        var asesor = Venta.from(command.getVentaID(),retrieveEvents(command.getAsesorID().value()));
+        asesor.actualizarNombreAsesor(command.getAsesorID(), command.getNombre());
+        emit().onResponse(new ResponseEvents(asesor.getUncommittedChanges()));
     }
 }

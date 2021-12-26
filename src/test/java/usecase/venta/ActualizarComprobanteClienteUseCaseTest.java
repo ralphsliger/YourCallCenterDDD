@@ -44,7 +44,8 @@ class ActualizarComprobanteClienteUseCaseTest {
                 new Comprobante("Recibo gas","Recibo")
         );
         when(repository.getEventsBy(any())).thenReturn(events());
-        var response = UseCaseHandler.getInstance().setIdentifyExecutor("MB2").syncExecutor(useCase, new RequestCommand<>(command)).orElseThrow();
+        var response = UseCaseHandler.getInstance()
+                .setIdentifyExecutor("RS").syncExecutor(useCase, new RequestCommand<>(command)).orElseThrow();
         var events = response.getDomainEvents();
         ComprobanteClienteActualizado comprobanteClienteActualizado = (ComprobanteClienteActualizado) events.get(0);
         Assertions.assertEquals("Recibo gas", comprobanteClienteActualizado.Comprobante().value().descripcion());

@@ -7,10 +7,11 @@ import domain.venta.values.Nombre;
 import java.util.Objects;
 
 public class Asesor extends Entity<AsesorID> {
-    Nombre nombre;
+    private Nombre nombre;
+
     public Asesor(AsesorID entityId, Nombre nombre) {
         super(entityId);
-        this.nombre=nombre;
+        this.nombre=Objects.requireNonNull(nombre);
     }
 
     public Nombre Nombre() {
@@ -18,7 +19,6 @@ public class Asesor extends Entity<AsesorID> {
     }
 
     public void actualizarNombre(Nombre nombre){
-        Objects.requireNonNull(nombre);
         this.nombre=nombre;
     }
 }

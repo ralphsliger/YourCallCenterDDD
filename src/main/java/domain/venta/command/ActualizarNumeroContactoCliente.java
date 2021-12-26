@@ -16,15 +16,15 @@ public class ActualizarNumeroContactoCliente extends Command {
         this.numero = numero;
     }
 
-    public ClienteID getClienteID() {
+    public ClienteID ClienteID() {
         return clienteID;
     }
 
-    public VentaID getIdVenta() {
+    public VentaID IdVenta() {
         return idVenta;
     }
 
-    public NumeroContacto getNumero() {
+    public NumeroContacto Numero() {
         return numero;
     }
 }
