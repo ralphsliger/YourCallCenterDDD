@@ -17,8 +17,7 @@ public class Lead  extends AggregateEvent<LeadID> {
 
     public Lead(LeadID entityId, Campana campana, Interes interes, NumeroDeContacto numeroDeContacto, Ubicacion ubicacion) {
         super(entityId);
-        Objects.requireNonNull(entityId);
-        Objects.requireNonNull(campana);
+        Objects.requireNonNull(entityId);Objects.requireNonNull(campana);
        Objects.requireNonNull(interes);
        Objects.requireNonNull(numeroDeContacto);
        Objects.requireNonNull(ubicacion);
