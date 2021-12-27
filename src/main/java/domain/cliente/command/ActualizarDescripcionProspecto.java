@@ -1,22 +1,19 @@
 package domain.cliente.command;
 
 import co.com.sofka.domain.generic.Command;
-import domain.cliente.values.ClienteLlamadaID;
-import domain.cliente.values.Conyugue;
-import domain.cliente.values.LlamadaID;
-import domain.cliente.values.ProspectoID;
+import domain.cliente.values.*;
 
 public class ActualizarDescripcionProspecto extends Command {
     private final ClienteLlamadaID clienteLlamadaID;
     private final LlamadaID llamadaID;
     private final ProspectoID prospectoID;
-    private final Conyugue conyugue;
+    private final DescripcionProspecto descripcionProspecto;
 
-    public ActualizarDescripcionProspecto(ClienteLlamadaID clienteLlamadaID, LlamadaID llamadaID, ProspectoID prospectoID, Conyugue conyugue) {
+    public ActualizarDescripcionProspecto(ClienteLlamadaID clienteLlamadaID, LlamadaID llamadaID, ProspectoID prospectoID, DescripcionProspecto descripcionProspecto) {
         this.clienteLlamadaID = clienteLlamadaID;
         this.llamadaID = llamadaID;
         this.prospectoID = prospectoID;
-        this.conyugue = conyugue;
+       this.descripcionProspecto=descripcionProspecto;
     }
 
     public ClienteLlamadaID ClienteLlamadaID() {
@@ -31,7 +28,7 @@ public class ActualizarDescripcionProspecto extends Command {
         return prospectoID;
     }
 
-    public Conyugue Conyugue() {
-        return conyugue;
+    public DescripcionProspecto DescripcionProspecto() {
+        return descripcionProspecto;
     }
 }

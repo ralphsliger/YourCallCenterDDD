@@ -1,8 +1,9 @@
 package domain.cliente.command;
 
+import co.com.sofka.domain.generic.Command;
 import domain.cliente.values.*;
 
-public class ActualizarRentaProspecto {
+public class ActualizarRentaProspecto extends Command {
     private final ClienteLlamadaID clienteLlamadaID;
     private final LlamadaID llamadaID;
     private final ProspectoID prospectoID;
