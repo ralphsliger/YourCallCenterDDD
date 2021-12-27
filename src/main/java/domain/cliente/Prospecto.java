@@ -6,11 +6,11 @@ import domain.cliente.values.*;
 import java.util.Objects;
 
 public class Prospecto extends Entity<ProspectoID> {
-    DescripcionProspecto descripcion;
-    Cita cita;
-    TipoFinaciamiento tipoFinaciamiento;
-    Renta renta;
-    Conyugue conyugue;
+    private DescripcionProspecto descripcion;
+    private Cita cita;
+    private TipoFinaciamiento tipoFinaciamiento;
+    private Renta renta;
+    private Conyugue conyugue;
 
     public Prospecto(ProspectoID entityId, DescripcionProspecto descripcion, Cita cita, TipoFinaciamiento tipoFinaciamiento, Renta renta, Conyugue conyugue) {
         super(entityId);

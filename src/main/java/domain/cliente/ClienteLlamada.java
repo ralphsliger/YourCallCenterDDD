@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class ClienteLlamada extends AggregateEvent<ClienteLlamadaID> {
-    Llamada llamada;
+    protected Llamada llamada;
 
     public ClienteLlamada(ClienteLlamadaID entityId, Llamada llamada) {
         super(entityId);

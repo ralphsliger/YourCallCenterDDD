@@ -45,8 +45,6 @@ n
 >src/main/java/domain/venta/events/NombreAsesorActualizado.java,9/6/9632db98ce026a11792aa139821470e6e1f48f6c
 f
 6src/test/java/usecase/venta/CrearVentaUseCaseTest.java,1/a/1af07ccf11effc5b4cf4c6f5f320674f4ecddd45
-V
-&src/main/java/domain/venta/Asesor.java,e/2/e20a822b7558efd68b655e48f543af779c55fed6
 r
 Bsrc/test/java/usecase/venta/ActualizarNombreAsesorUseCaseTest.java,4/5/454859997d038f2dd115f26ee24c4f27121de5bc
 _
@@ -77,8 +75,6 @@ t
 Dsrc/main/java/domain/venta/events/ComprobanteClienteActualizado.java,3/a/3a15a087d5c561596b9aa66d46d0af0386f36699
 {
 Ksrc/test/java/usecase/venta/ActualizarNumeroContactoClienteUseCaseTest.java,f/9/f9650bbac529d656da12ff15198d715baa2a2590
-x
-Hsrc/test/java/usecase/venta/ActualizarComprobanteClienteUseCaseTest.java,3/6/36f4f1018e3e377f6f4fbd47ee1b7084cf5cb3c7
 q
 Asrc/main/java/usecase/lead/ActualizarNumeroDeContactoUseCase.java,1/f/1fac1b9d225c6cc40eec8ee3085ce35520d5dcec
 l
@@ -105,18 +101,12 @@ h
 .src/main/java/domain/cliente/values/Renta.java,4/1/419f85479507a917231901997a158564f18d2ce5
 j
 :src/main/java/domain/cliente/values/TipoFinaciamiento.java,7/9/79f83237b7596c6620a3edb3691f2a5ff0b021b1
-V
-&src/main/java/domain/lead/Campana.java,d/8/d887b7bff102debd57be652d46c2213c581fc774
 [
 +src/main/java/domain/cliente/Asistente.java,6/9/694810cea5affb08c58f51bf7bb51743942d9173
 d
 4src/main/java/domain/venta/events/ClienteCreado.java,b/c/bc4c22410e4fe3537b069cfc2f2de0da73307679
 m
 =src/main/java/domain/cliente/values/DescripcionProspecto.java,0/5/05e0a7605b3efa788f2989fd940e8c90dda9074e
-[
-+src/main/java/domain/cliente/Prospecto.java,c/7/c73fb5e4604db9945f0b41f6d2754d14e8f3861b
-S
-#src/main/java/domain/lead/Lead.java,6/9/6998d64f971f2246d5de855079fec71ffb04116a
 c
 3src/main/java/domain/lead/events/CampanaCreada.java,6/3/63655ad656d3ba46f6c9aa336fe64de8f5fa36b9
 l
@@ -133,10 +123,6 @@ q
 Asrc/main/java/domain/cliente/event/RentaProspectoActualizada.java,d/3/d39b7af6e6ae9cf16fce4f194a0b0c73bba5fc2a
 ~
 Nsrc/main/java/domain/cliente/event/TipoFinanciamientoProspectoActualizado.java,e/c/ecf5bdf031a4602ba8146f6e18a7775e3a2b75a4
-Y
-)src/main/java/domain/cliente/Llamada.java,b/f/bf0c76b730552f25d359b682568b2dbeaadbeffd
-Y
-)src/main/java/domain/lead/LeadChange.java,d/b/db7b02218a9f7e4447dea14c648adc74b9849a95
 q
 Asrc/main/java/domain/lead/command/ActualizarNumeroDeContacto.java,4/f/4fb258d53ede1757ae6a9e7d7ac2fe00b5b09b5c
 p
